@@ -86,9 +86,9 @@ This schema supports:
 ## Triggers
 | Trigger Name | Description |
 |----------|----------------|
-|  |  |
-|  |  |
-|  |  |
+| people_audit_table_insert | adds the record to the audit table for the people table when an insert occurs on the people table |
+| people_audit_table_update | adds the record to the audit table for the people table when an update occurs on the people table |
+| people_audit_table_delete | adds the record to the audit table for the people table when an delete occurs on the people table |
 |  |  |
 |  |  |
 |  |  |
