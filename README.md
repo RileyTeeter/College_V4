@@ -98,7 +98,7 @@ This schema supports:
 ## Events
 | Event Name | Description |
 |----------|----------------|
-| | |
+| people_audit_monthy_truncate | truncates the audit table monthly |
 | | |
 ---
 
