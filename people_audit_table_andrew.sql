@@ -21,7 +21,7 @@ CREATE TRIGGER people_audit_table_insert
     FOR EACH ROW
 BEGIN
 	INSERT INTO people_audit_table (people_id,first_name,last_name,system_userid,email,phone_number,address,audit_user_id,type_of_audit)
-    VALUES (NEW.people_id,NEW.first_name,NEW.last_name,NEW.system_userid,NEW.email,NEW.phone_number,NEW.address,'INSERT');
+    VALUES (NEW.people_id,NEW.first_name,NEW.last_name,NEW.system_userid,NEW.email,NEW.phone_number,NEW.address, NEW.audit_user_id, 'INSERT');
 END//
 
 
@@ -32,7 +32,7 @@ CREATE TRIGGER people_audit_table_delete
     FOR EACH ROW
 BEGIN
 	INSERT INTO people_audit_table (people_id,first_name,last_name,system_userid,email,phone_number,address,audit_user_id,type_of_audit)
-    VALUES (OLD.people_id,OLD.first_name,OLD.last_name,OLD.system_userid,OLD.email,OLD.phone_number,OLD.address,'DELETE');
+    VALUES (OLD.people_id,OLD.first_name,OLD.last_name,OLD.system_userid,OLD.email,OLD.phone_number,OLD.address, OLD.audit_user_id, 'DELETE');
 END//
 
 DELIMITER //
@@ -42,7 +42,7 @@ CREATE TRIGGER people_audit_table_update
     FOR EACH ROW
 BEGIN
 	INSERT INTO people_audit_table (people_id,first_name,last_name,system_userid,email,phone_number,address,audit_user_id,type_of_audit)
-    VALUES (OLD.people_id,OLD.first_name,OLD.last_name,OLD.system_userid,OLD.email,OLD.phone_number,OLD.address,'UPDATE');
+    VALUES (OLD.people_id,OLD.first_name,OLD.last_name,OLD.system_userid,OLD.email,OLD.phone_number,OLD.address, NEW.audit_user_id, 'UPDATE');
 END//
 
 SET GLOBAL event_scheduler = ON;
