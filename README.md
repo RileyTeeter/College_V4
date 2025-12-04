@@ -1,4 +1,4 @@
-# 🎓 College Database Management System (CollegeDBV3)
+# 🎓 College Database Management System (CollegeDBV4)
 
 ## 📘 Description
 The **College Database Management System (CollegeDBV3)** is a MySQL-based relational database designed to support a college’s academic and administrative operations.  
@@ -82,3 +82,26 @@ This schema supports:
 | **get_student_id**| Function designed to get the student id given a first and last name |
 | **get_email_list**| Function designed to get the entire mailing list of a given person type (admin, faculty or student) returns a json object because mariadb doesn't allow functions to return tables see line two of the function for how to use in a select statement |
 ---
+
+## Triggers
+| Trigger Name | Description |
+|----------|----------------|
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+---
+
+## Events
+| Event Name | Description |
+|----------|----------------|
+| | |
+| | |
+---
+
+
+
+
