@@ -86,20 +86,20 @@ This schema supports:
 ## Triggers
 | Trigger Name | Description |
 |----------|----------------|
-| people_audit_table_insert | adds the record to the audit table for the people table when an insert occurs on the people table |
-| people_audit_table_update | adds the record to the audit table for the people table when an update occurs on the people table |
-| people_audit_table_delete | adds the record to the audit table for the people table when an delete occurs on the people table |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| **people_audit_table_insert** | Adds the record to the audit table for the people table when an insert occurs on the people table |
+| **people_audit_table_update** | Adds the record to the audit table for the people table when an update occurs on the people table |
+| **people_audit_table_delete** | Adds the record to the audit table for the people table when an delete occurs on the people table |
+| **trg_people_audit_insert** | Logs new People records when they are created. |
+| **trg_people_audit_update** | Records updated data whenever a People row is modified. |
+| **trg_people_audit_delete** | Captures old data before a People record is removed. |
+
 ---
 
 ## Events
 | Event Name | Description |
 |----------|----------------|
-| people_audit_monthy_truncate | truncates the audit table monthly |
-| | |
+| **people_audit_monthy_truncate** | Truncates the audit table monthly |
+| **evt_truncate_people_audit**| This event automatically clears the People_Audit table once every month|
 ---
 
 
