@@ -89,9 +89,9 @@ This schema supports:
 | **people_audit_table_insert** | Adds the record to the audit table for the people table when an insert occurs on the people table |
 | **people_audit_table_update** | Adds the record to the audit table for the people table when an update occurs on the people table |
 | **people_audit_table_delete** | Adds the record to the audit table for the people table when an delete occurs on the people table |
-| **trg_people_audit_insert** | Logs new People records when they are created. |
-| **trg_people_audit_update** | Records updated data whenever a People row is modified. |
-| **trg_people_audit_delete** | Captures old data before a People record is removed. |
+| **trg_courses_insert_audit** | Logs new Course records when they are created. |
+| **trg_courses_update_audit** | Records updated data whenever a Course row is modified. |
+| **trg_courses_delete_audit** | Captures old data before a Course record is removed. |
 
 ---
 
@@ -99,7 +99,7 @@ This schema supports:
 | Event Name | Description |
 |----------|----------------|
 | **people_audit_monthy_truncate** | Truncates the audit table monthly |
-| **evt_truncate_people_audit**| This event automatically clears the People_Audit table once every month|
+| **ev_courses_audit_monthly_truncate**| This event automatically clears the Courses_Audit table once every month|
 ---
 
 
